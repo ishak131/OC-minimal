@@ -4,15 +4,6 @@ import PostModel from '../../MongoSchema/post/postModel'
 
 
 export default class Post implements PostInterface {
-
-    async addNewPost({ postName, postDescription}): Promise<object> {
-        const post = new PostModel({
-            postName,
-            postDescription
-        });
-        return await post.save()
-    }
-
     async addPost(req: any, res: any): Promise<object> {
         const { postName, postDescription } = req.body
         const post = new PostModel({

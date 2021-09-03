@@ -4,16 +4,6 @@ const postRouter = express.Router();
 const post = new Post()
 
 
-postRouter.post('/createNewPost', async (req: Request, res: Response): Promise<object> => {
-    try {
-        const { postName, postDescription } = req.body
-        const savedPost = post.addNewPost({ postName, postDescription })
-        return res.send({ savedPost });
-    } catch (error) {
-        return res.status(400).send({ error });
-    }
-})
-
 postRouter.post('/createPost', async (req: any, res: any): Promise<object> => {
     try {
         return post.addPost(req, res);
