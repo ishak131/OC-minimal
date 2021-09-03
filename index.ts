@@ -34,6 +34,6 @@ async function connectMeMongoDB(): Promise<void> {
 //#endregion
 
 /////////////// making the app listening to port 4000 on localhost///////////////
-app.listen(process.env.port || 4000)
+app.listen(process.env.PORT || 4000)
 
 export default app
