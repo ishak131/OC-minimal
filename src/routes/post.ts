@@ -25,7 +25,7 @@ postRouter.put('/editPost', async (req: any, res: any) => {
     try {
         post.editPost(req, res)
     } catch (error) {
-        return res.status(400).send({ error })
+        return  res.status(400).send({ error })
     }
 
 })
